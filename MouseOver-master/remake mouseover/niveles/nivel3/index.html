@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MouseOver | LEVEL 3</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body onload="inicializa()" >
+	<div class="phone">
+		<p>LO LAMENTAMOS, ESTE JUEGO <span class="no">NO</span> ESTA HECHO PARA UN CELULAR :(</p>
+	</div>
+	<div id="iniciar"><p>LEVEL 3 </p><button onclick="sonido.play(),iniciar()" >play</button></div>
+	<div id="lose">
+		<h1>GAME OVER</h1>
+		<button class="menuBar" onclick="menu()">
+			<div class="lineas"></div>
+			<div class="lineas linea"></div>
+			<div class="lineas ultima"></div>
+		</button>
+		<img src="../../img/restart.png" class="lose" onclick="again()">
+	</div>
+	<div id="win">
+		<h1>YOU WIN</h1>
+		<button class="menuBar" onclick="menu()">
+			<div class="lineas"></div>
+			<div class="lineas linea"></div>
+			<div class="lineas ultima"></div>
+		</button>
+		<img src="../../img/next.png" class="next" onclick="next(), play.play()">
+		<img src="../../img/restart.png" class="lose" onclick="again()">
+	</div>
+	<div class="contenedor pointer" id="contenedor">
+		<span id="puntos"></span>
+		<span id="tiempo"></span>
+	</div>
+	<div class="contenedor" id="contenedorPlayer">
+		<div id="player" onmouseover="sonido.play()"></div>
+		<div id="enemy" onmouseover="gameover.play()"></div>
+		<div id="enemy2" onmouseover="gameover.play()"></div>
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript">
+		var play = new Audio();
+		play.src = "../../audio/play.mp3";
+		var gameover = new Audio();
+		gameover.src = "../../audio/over2.mp3";
+		function menu(){
+			 window.location.href = "../../index.html";
+		}
+		function next(){
+			setTimeout(function() {
+			window.location.href = "../nivel4/index.html";
+			}, 2000);
+		}
+	</script>
+	<script type="text/javascript">
+		var nivelesSuperados = localStorage.getItem("lv");
+		console.log(nivelesSuperados);
+		setInterval(controlar,100);
+		function controlar(){
+			if (puntaje == 10 && nivelesSuperados == 2) {
+				var nivel = 3;
+				localStorage.setItem("lv", nivel);
+			}
+		}
+	</script>
+</body>
+</html>

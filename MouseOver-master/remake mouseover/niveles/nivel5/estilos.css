@@ -1,0 +1,296 @@
+* {
+	margin:0;
+	padding: 0;
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	background-image: url("../../img/fondo.png");
+	background-size: 100% 100%; 
+}
+
+
+
+
+
+.contenedor{
+	width: 500px;
+	height: 500px;
+	margin:auto;
+	background: linear-gradient(to bottom,#2d3436,#353b48,#2d3436);
+	border:2px solid #00a8ff;
+	box-shadow: 0px 0px 15px #00a8ff;
+	display: none;
+}
+.pointer{
+	height: 70px;
+	padding-top: 30px;
+	margin-top: 50px;
+	background:linear-gradient(to right,#7f8fa6, #dfe6e9,#7f8fa6);
+	border:2px solid #00a8ff;
+	border-bottom: 0px;
+	box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+span {
+	font-family: lato;
+	font-size: 20px;
+	font-weight: 10;
+	color:#000;
+	margin-left: 100px;
+
+}
+#player{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background: linear-gradient(to bottom,#2d3436,#353b48,#2d3436);
+	border:2px solid #00a8ff;
+	box-shadow: 0px 0px 20px #00a8ff;
+	transition-duration: .3s;
+	margin-top: 210px;
+	margin-left: 210px;
+	position: absolute;
+}
+#lose {
+	width: 500px;
+	height: 200px;
+	margin:auto;
+	margin-top: 150px;
+	background:linear-gradient(to right,#7f8fa6, #dfe6e9,#7f8fa6);
+	border:2px solid #00a8ff;
+	display: none;
+	text-align: center;
+	border-radius: 20px;
+
+}
+.lose {
+	width: 50px;
+	height: 50px;
+	outline: none;
+	background: none;
+	border:none;
+	border-radius: 50%;
+	font-weight: 10;
+	font-size: 30px;
+	font-family: lato;
+	cursor: pointer;
+}
+#win {
+	width: 500px;
+	height: 200px;
+	margin:auto;
+	margin-top: 150px;
+	background:linear-gradient(to right,#7f8fa6, #dfe6e9,#7f8fa6);
+	border:2px solid #00a8ff;
+	border-radius: 20px;
+	display: none;
+	text-align: center;
+}
+.win {
+	width: 150px;
+	height: 50px;
+	outline: none;
+	background: #fff;
+	border:none;
+	border-radius: 5px;
+	font-weight: 10;
+	font-size: 30px;
+	font-family: lato;
+	cursor: pointer;
+}
+h1{
+	font-size: 40px;
+	font-weight: 10;
+	font-family: lato;
+	margin-top: 30px;
+	margin-bottom: -110px;
+}
+
+#iniciar{
+	width: 500px;
+	height: 200px;
+	background:linear-gradient(to right,#dfe6e9,#7f8fa6,#dfe6e9);
+	border-radius: 20px;
+	display: none;
+	margin:auto;
+	margin-top: 200px;
+	text-align: center;
+}
+#iniciar>button{
+	width: 250px;
+	height: 60px;
+	border:none;
+	outline: none;
+	border-radius: 10px;
+	font-size: 30px;
+	font-family: lato;
+	font-weight: 10;
+	margin-top: 60px;
+	cursor: pointer;
+	transition-duration: 1s;
+}
+#iniciar>button:hover{
+	background: #00a8ff;
+}
+p {
+	height: 30px;
+	margin-top: 10px;
+	font-size: 20px;
+	font-weight: 10;
+	font-family: lato;
+}
+
+
+.next{
+	width: 50px;
+	height: 50px;
+	margin-right: 30px;
+	cursor: pointer;
+	border-radius: 30%;
+}
+	.menuBar{
+			background: none;
+			border:none;
+			outline: none;
+			width: 30px;
+			height: 50px;
+			margin-right: 50px;
+			margin-top: -50px;
+			text-align: center;
+			cursor: pointer;
+		}
+		.lineas{
+			display: block;
+			max-width: 40px;
+			width: 30px;
+			height: 2px;
+			background: #000;
+			margin-top: 5px;
+			transition-duration: .2s;
+			transition-delay: .1s;
+		}
+		.ultima{
+			margin-bottom: 10px;
+		}
+		.menuBar:hover>.linea{
+			margin-top: 8px;
+			margin-bottom: 8px;
+		}
+
+.phone{
+	color:#fff;
+	height: 700px;
+	display: none;
+	font-family: lato;
+	font-weight: 10;
+	text-align: center;
+}
+.phone>p {
+	height: 700px;
+	font-size: 20px;
+}
+.no {
+	font-size: 20px;
+	color:#b22;
+	text-decoration: underline #b22;
+	margin-left: -0px;
+}
+
+
+#fila1 {
+	width: 100%;
+	height: 20px;
+	display: flex;
+	margin-left: -90px;
+	transition-duration: 5s;
+	padding-left: 35px;
+	margin-top: 100px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+#fila2 {
+	width: 100%;
+	height: 20px;
+	display: flex;
+	margin-left: 100px;
+	transition-duration: 5s;
+	padding-left: 35px;
+	margin-top: 150px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#enemy1{
+	width: 30px;
+	height: 100%;
+	margin-left: 60px;
+}
+#enemy2{
+	width: 30px;
+	height: 100%;
+	margin-left: 60px;
+}
+#enemy3{
+	width: 30px;
+	height: 100%;
+	margin-left: 60px;
+}
+#enemy4{
+	width: 30px;
+	height: 100%;
+	margin-left: 60px;
+}
+#enemy5{
+	width: 30px;
+	height: 100%;
+	margin-left: 60px;
+}
+#enemy6{
+	width: 30px;
+	height: 100%;
+	margin-left: 60px;
+}
+#enemy7{
+	width: 30px;
+	height: 100%;
+	margin-left: 60px;
+}
+#enemy8{
+	width: 30px;
+	height: 100%;
+	margin-left: 60px;
+}
+.enemy{
+	background: linear-gradient(to bottom,#2d3436,#353b48,#2d3436);
+	box-shadow: 0px 0px 15px #c0392b;
+	border:1px solid #c0392b;
+	border-radius: 10px;
+}
+
+@media screen and (max-height: 600px){
+	.pointer{
+		margin-top:10px;
+		height: 40px;
+		padding-top: 15px;
+	}
+}
+
+
+@media screen and (max-height: 580px){
+	.phone{
+		display: block;
+	}
+	.contenedor{
+		display: none;
+	}
+}
+
+@media screen and (max-width:  550px){
+	.phone{
+		display: block;
+	}
+
+	.contenedor{
+		display: none;
+	}
+}

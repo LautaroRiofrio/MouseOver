@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MouseOver | LEVELS</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body onload="iniciar()">
+	<div class="phone">
+		<p>LO LAMENTAMOS, ESTE JUEGO <span class="NO">NO</span> ESTA HECHO PARA UN CELULAR :(</p>
+	</div>
+	<button class="volver" onclick="volver(),play.play()">VOLVER</button>
+	<div class="contenedor">
+		<div class="no" id="no">
+			<h1>TODAVIA NO LLEGASTE A ESTE NIVEL</h1>
+		</div>
+		<div class="soon" id="soon"><h1>COMING SOON</h1></div>
+		<div class="level" id="level1" onclick="nivel1(),play.play()"><h1 id="h1" class="nivel">NIVEL 1</h1></div>
+		<div class="level" id="level2" onclick="nivel2(),play.play()"><h1 id="h2" class="nivel">NIVEL 2</h1></div>
+		<div class="level" id="level3" onclick="nivel3(),play.play()"><h1 id="h3" class="nivel">NIVEL 3</h1></div>
+		<div class="level" id="level4" onclick="nivel4(),play.play()"><h1 id="h4" class="nivel">NIVEL 4</h1></div>
+		<div class="level" id="level5" onclick="nivel5(),play.play()"><h1 id="h5" class="nivel">NIVEL 5</h1></div>
+		<div class="level" id="level6" onclick="nivel6(),play.play()"><h1 id="h6" class="nivel">NIVEL 6</h1></div>
+		<div class="level" id="level7" onclick="nivel7(),play.play()"><h1 id="h7" class="nivel">COMING SOON</h1></div>
+	</div>
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript">
+		var play = new Audio();
+		play.src = "../audio/sonido.mp3";
+		function nivel1(){
+			setTimeout(function() {
+				window.location.href = "../niveles/nivel1/index.html";
+			}, 200);
+		}
+		function nivel2(){
+			if (nivelesSuperados > 0 ) {
+				setTimeout(function() {
+					window.location.href = "../niveles/nivel2/index.html";
+				}, 200);
+			} else {
+				document.getElementById("no").style.display = "block";
+				setTimeout(function() {
+					document.getElementById("no").style.display = "none";
+				}, 1000);
+			}
+		}
+		function nivel3(){
+			if (nivelesSuperados > 1) {
+				setTimeout(function() {
+					window.location.href = "../niveles/nivel3/index.html";
+				}, 200);
+			} else {
+				document.getElementById("no").style.display = "block";
+				setTimeout(function() {
+					document.getElementById("no").style.display = "none";
+				}, 1000);
+			}
+		}
+		function nivel4(){
+			if (nivelesSuperados > 2) {
+				setTimeout(function() {
+					window.location.href = "../niveles/nivel4/index.html";
+				}, 200);
+			} else {
+				document.getElementById("no").style.display = "block";
+				setTimeout(function() {
+					document.getElementById("no").style.display = "none";
+				}, 1000);
+			}
+		}
+		function nivel5(){
+			if (nivelesSuperados > 3) {
+				setTimeout(function() {
+					window.location.href = "../niveles/nivel5/index.html";
+				}, 200);
+			} else {
+				document.getElementById("no").style.display = "block";
+				setTimeout(function() {
+					document.getElementById("no").style.display = "none";
+				}, 1000);
+			}
+		}
+		function nivel6(){
+			if (nivelesSuperados > 4) {
+				setTimeout(function() {
+					window.location.href = "../niveles/nivel6/index.html";
+				}, 200);
+			} else {
+				document.getElementById("no").style.display = "block";
+				setTimeout(function() {
+					document.getElementById("no").style.display = "none";
+				}, 1000);
+			}
+		}
+		function nivel7(){
+
+				document.getElementById("soon").style.display = "block";
+				setTimeout(function() {
+					document.getElementById("soon").style.display = "none";
+				}, 1000);
+			}
+
+	
+
+		function volver(){
+			setTimeout(function() {
+			window.location.href = "../index.html"
+			}, 200);
+		}
+
+	</script>
+
+</body>
+</html>
